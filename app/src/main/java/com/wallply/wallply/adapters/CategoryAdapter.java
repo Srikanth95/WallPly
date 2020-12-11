@@ -2,17 +2,19 @@ package com.wallply.wallply.adapters;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.widget.RecyclerView;
+//import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.bumptech.glide.Glide;
 
 import com.wallply.wallply.R;
-import com.wallply.wallply.CategoryViewActivity;
+import com.wallply.wallply.activities.CategoryViewActivityK;
 
 /**
  * Created by sree on 2/27/2017.
@@ -50,7 +52,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(v.getContext(), CategoryViewActivity.class);
+                Intent intent = new Intent(v.getContext(), CategoryViewActivityK.class);
                 intent.putExtra("name", sid);
                 v.getContext().startActivity(intent);
             }

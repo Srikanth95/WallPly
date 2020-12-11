@@ -8,50 +8,6 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:990729241842:android:b83a2fd5acf3b64b",
-        "android_client_info": {
-          "package_name": "com.example.sree.tabwall"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "990729241842-bvudfbpvhj1rpdoh3tmpfc17b9oljdu1.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.sree.tabwall",
-            "certificate_hash": "9B581E06E8E98698029F142C2DE67A4DAD165722"
-          }
-        },
-        {
-          "client_id": "990729241842-u6j59jgqhtv9m2jkf5g387nhe3utktu7.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyChxn8CnSZylUOJqdmkRKmiCDCnUrg8rzs"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "appinvite_service": {
-          "status": 2,
-          "other_platform_oauth_client": [
-            {
-              "client_id": "990729241842-u6j59jgqhtv9m2jkf5g387nhe3utktu7.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        },
-        "ads_service": {
-          "status": 2
-        }
-      }
-    },
-    {
-      "client_info": {
         "mobilesdk_app_id": "1:990729241842:android:26543a1c520a03ee",
         "android_client_info": {
           "package_name": "com.wallply.wallply"
@@ -59,11 +15,19 @@
       },
       "oauth_client": [
         {
+          "client_id": "990729241842-6hek0qcgh4ad9602sa1o1ea0iovl87u8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.wallply.wallply",
+            "certificate_hash": "8648c8002fc45eb5e10c6b6ffba1d522e1ce4aa2"
+          }
+        },
+        {
           "client_id": "990729241842-8md46jet4q7bclgkklhfhp5reh14n3i0.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.wallply.wallply",
-            "certificate_hash": "9B581E06E8E98698029F142C2DE67A4DAD165722"
+            "certificate_hash": "9b581e06e8e98698029f142c2de67a4dad165722"
           }
         },
         {
@@ -77,22 +41,16 @@
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 2,
           "other_platform_oauth_client": [
             {
               "client_id": "990729241842-u6j59jgqhtv9m2jkf5g387nhe3utktu7.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
-        },
-        "ads_service": {
-          "status": 2
         }
-      }
+      },
+      "admob_app_id": "ca-app-pub-8883586149598239~6104564503"
     }
   ],
   "configuration_version": "1"

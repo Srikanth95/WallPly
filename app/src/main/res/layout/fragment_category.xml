@@ -2,15 +2,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.wallply.wallply.fragments.CategoryFragment">
+    tools:context="com.wallply.wallply.fragments.CollectionsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <android.support.v7.widget.RecyclerView
+
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
-
-        android:id="@+id/recv1"></android.support.v7.widget.RecyclerView>
+        android:paddingTop="10dp"
+        android:paddingBottom="50dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:clipToPadding="false"
+        android:id="@+id/recv1">
+    </androidx.recyclerview.widget.RecyclerView>
 
 
 </FrameLayout>

@@ -1,10 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#003366</color>
-    <color name="colorPrimaryDark">#003366</color>
-    <color name="colorAccent">#0080ff</color>
+
+    <color name="colorPrimaryDark">@color/white</color>
+    <color name="colorPrimary">@color/white</color>
+    <color name="colorAccent">#5886AF</color>
+    <color name="windowBackground">@color/colorPrimary</color>
+    <color name="textColorPrimary">@color/black</color>
+    <color name="statusBarColor">@color/colorPrimary</color>
+    <color name="navigationBarColor">@color/colorPrimary</color>
+    <color name="favourite_color">#EAC77D</color>
+    <color name="bottomNavText">#99000000</color>
+    <color name="startScreenBackground">#315677</color>
+    <color name="startScreenText">@color/white</color>
+    <color name="progressBarColor">#FFFFFF</color>
+
+
+
+
+    <color name="black">#000000</color>
+    <color name="white">#fff</color>
+    <color name="dark_grey">#18191b</color>
     <color name="black_overlay">#66000000</color>
-    <color name="background">#001a33</color>
-    <color name="lightBackground">#00264d</color>
-    <color name="transparent">#59000000</color>
+    <color name="black_overlay_dark">#66000000</color>
+    <color name="transparent">#00000000</color>
+
+
+
+    <!--    <color name="colorPrimary1">#22264b</color>-->
+    <!--    <color name="colorPrimaryDark1">#22264b</color>-->
+    <!--    <color name="colorPrimary">#212121</color>-->
+    <!--    <color name="gray_200">#EEEEEE</color>-->
+    <!--    <color name="black_overlay_light">#10000000</color>-->
+    <!--    <color name="background">#001a33</color>-->
+    <!--    <color name="lightBackground">#00264d</color>-->
+    <!--    <color name="cyan_material">#009ed2</color>-->
+    <!--    <color name="light_grey">#CCCCCC</color>-->
+    <!--    <color name="colorAccent1">#FF4081</color>-->
+
+
+
+
+
+
+
+
 </resources>

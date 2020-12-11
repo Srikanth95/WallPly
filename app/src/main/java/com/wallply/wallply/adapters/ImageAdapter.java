@@ -2,18 +2,24 @@ package com.wallply.wallply.adapters;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.widget.RecyclerView;
-
+//import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.quickblox.content.model.QBFile;
-import com.wallply.wallply.FullscreenActivity;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.firebase.ui.storage.images.FirebaseImageLoader;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+
 
 import com.wallply.wallply.R;
+import com.wallply.wallply.activities.FullscreenActivity;
 
 import java.util.ArrayList;
 
@@ -26,7 +32,11 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
 
     private Context mContext;
 
-    private ArrayList<QBFile> arrayList;
+    FirebaseStorage firebaseStorage;
+    StorageReference storageReference;
+
+
+    private ArrayList<String> arrayList;
 
 
     public ImageAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -36,13 +46,16 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
         return vh;
     }
 
-    public ImageAdapter(Context context, ArrayList<QBFile> arrayList) {
+    public ImageAdapter(Context context, ArrayList<String> arrayList) {
         mContext = context;
+        firebaseStorage = FirebaseStorage.getInstance();
+        storageReference = firebaseStorage.getReference();
+
 
         this.arrayList = arrayList;
     }
 
-    public QBFile getItem(int position) {
+    public String getItem(int position) {
         return arrayList.get(position);
     }
 
@@ -51,11 +64,20 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
     public void onBindViewHolder(ImageAdapter.ViewHolder holder, int position) {
 
 
-        final QBFile qbFile = getItem(position);
-        final String sid = qbFile.getPublicUrl();
+        final String qbFile = getItem(position);
+       // final String sid = qbFile.getPublicUrl();
 
 
-        Glide.with(mContext).load(sid).crossFade()
+
+
+
+
+
+
+
+
+
+        Glide.with(mContext).using(new FirebaseImageLoader()).load(storageReference.child("thumbnails").child(qbFile)).crossFade().diskCacheStrategy(DiskCacheStrategy.RESULT)
 
 
                 .into(holder.imageView);
@@ -64,8 +86,9 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
             public void onClick(View v) {
 
                 Intent intent = new Intent(v.getContext(), FullscreenActivity.class);
-                intent.putExtra("sid", sid);
-                intent.putExtra("name", qbFile.getName().toString());
+               // intent.putExtra("sid", sid);
+                intent.putExtra("name", qbFile);
+                //intent.putExtra("public_id",wallpaperModel.getPublic_id());
                 v.getContext().startActivity(intent);
             }
 
@@ -82,10 +105,12 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView imageView;
+        TextView textView;
 
         public ViewHolder(View itemView) {
             super(itemView);
             imageView = (ImageView) itemView.findViewById(R.id.imageView1);
+
         }
     }
 }

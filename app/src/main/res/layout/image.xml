@@ -1,37 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView android:layout_height="250dp"
-    android:layout_width="match_parent"
+<androidx.cardview.widget.CardView
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_margin="1dp"
-    app:cardCornerRadius="0dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="300dp"
+    android:layout_width="match_parent"
+    android:layout_margin="15dp"
     android:clickable="true"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-
-
-
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            >
-
+    app:cardCornerRadius="2dp"
+    app:cardElevation="2dp" >
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:background="@color/lightBackground"
+        android:transitionName="wallpaper"
+        android:background="@color/colorAccent"
+        android:id="@+id/imageView1" />
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/transparent"
+        android:visibility="visible"
+        android:layout_gravity="bottom"
+        android:id="@+id/text_layout"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="60dp"
+            android:text="Landscape"
+            android:lines="1"
+            android:visibility="gone"
+            android:id="@+id/wall_name"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            android:textColor="@color/white"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:id="@+id/favourite"
+            android:layout_gravity="end|center_vertical"
+            android:src="@drawable/heart"
+            android:background="@drawable/shape_black_overlay"
+            android:scaleType="centerInside"
+            android:padding="10dp"
+            android:layout_marginRight="10dp"
+            android:tintMode="multiply"
+            android:tint="@color/favourite_color"
+            android:layout_height="40dp" />
+
+        </FrameLayout>
 
 
-
-        android:id="@+id/imageView1"
-        />
-        </LinearLayout>
-    </FrameLayout>
-
-
-</android.support.v7.widget.CardView>
+</androidx.cardview.widget.CardView>

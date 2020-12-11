@@ -1,25 +1,20 @@
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:ads="http://schemas.android.com/apk/res-auto"
-
-
     tools:context="com.wallply.wallply.fragments.AllFragment">
 
 
 
-    <!-- TODO: Update blank fragment layout -->
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
         android:id="@+id/frame">
         <ProgressBar
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:id="@+id/loading"
             android:layout_gravity="center"/>
         <TextView
@@ -29,52 +24,60 @@
             android:text="Please Wait..."
             android:id="@+id/waitText"
             android:layout_marginLeft="10dp"
-            android:textColor="#FFF"
-            android:layout_marginTop="50dp"/>
+            android:textColor="@color/textColorPrimary"
+            android:layout_marginTop="40dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/checktext"
             android:text="Please Check your Internet Connection"
-            android:textColor="#fff"
+            android:textColor="@color/textColorPrimary"
             android:layout_gravity="center"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:textColor="@color/white"
             android:id="@+id/tryagain"
             android:text="Try Again"
             android:background="@drawable/shape"
             android:layout_marginTop="50dp"/>
     </FrameLayout>
 
-
-
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-
-        android:id="@+id/recv1"></android.support.v7.widget.RecyclerView>
-
-
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <com.google.android.gms.ads.NativeExpressAdView
-            android:id="@+id/adView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentBottom="true"
-            ads:adUnitId="@string/ad_accent_id"
-            ads:adSize="400x80">
-        </com.google.android.gms.ads.NativeExpressAdView>
-
-    </RelativeLayout>
+        android:paddingTop="10dp"
+        android:paddingBottom="50dp"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:clipToPadding="false"
+        android:id="@+id/recv1"/>
 
 
 
-</android.support.design.widget.CoordinatorLayout>
+
+
+
+
+
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
+
+<!--        <com.google.android.gms.ads.AdView-->
+<!--            xmlns:ads="http://schemas.android.com/apk/res-auto"-->
+<!--            android:id="@+id/adView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            ads:adSize="BANNER"-->
+<!--            ads:adUnitId="ca-app-pub-3940256099942544/6300978111">-->
+<!--        </com.google.android.gms.ads.AdView>-->
+
+<!--    </RelativeLayout>-->
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
