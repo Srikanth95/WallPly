@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/all_wallpapers"
+        android:title="@string/all_wallpapers_title"
+        android:icon="@drawable/outline_amp_stories_24"
+        android:enabled="true"/>
+    <item android:id="@+id/collections"
+        android:title="@string/collections_title"
+        android:icon="@drawable/outline_collections_24"
+        android:enabled="true"/>
+    <item android:id="@+id/favourites"
+        android:title="@string/favourites_title"
+        android:icon="@drawable/round_favorite_border_black_24"
+        android:enabled="true"/>
+    <item android:id="@+id/settings"
+        android:title="@string/settings_title"
+        android:icon="@drawable/round_settings_24"
+        android:enabled="true"/>
+</menu>

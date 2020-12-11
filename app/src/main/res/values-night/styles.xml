@@ -1,0 +1,112 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight">
+
+<!--        <item name="android:windowActivityTransitions">true</item>-->
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/windowBackground</item>
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:statusBarColor">@color/statusBarColor</item>
+        <item name="android:navigationBarColor" >@color/navigationBarColor</item>
+<!--        <item name="android:windowLightStatusBar">true</item>-->
+<!--        <item name="android:windowLightNavigationBar">true</item>-->
+
+        <item name="fontFamily">@font/comfortaa_regular</item>
+
+    </style>
+
+    <style name="AppTheme.SplashScreen" parent="AppTheme">
+        <item name="android:windowBackground">@drawable/starting_screen</item>
+    </style>
+
+    <style name="FullscreenTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="windowActionBarOverlay">true</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:statusBarColor">@color/transparent</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/black</item>
+        <item name="fontFamily">@font/comfortaa_regular</item>
+
+    </style>
+
+
+
+    <style name="FullscreenActionBarStyle" parent="Widget.MaterialComponents.Light.ActionBar.Solid">
+
+
+        <item name="android:background">@color/transparent</item>
+        <item name="background">@color/transparent</item>
+
+    </style>
+
+
+    <style name="JosefinTextView">
+        <item name="android:fontFamily">@font/josefin_sans_light</item>
+        <item name="fontFamily">@font/josefin_sans_light</item>
+    </style>
+
+    <style name="ProgressBarStyle" parent="Widget.MaterialComponents.ProgressIndicator.Linear.Indeterminate">
+        <item name="colorAccent">@color/progressBarColor</item>
+        <item name="indicatorColor">@color/progressBarColor</item>
+    </style>
+
+
+
+
+
+    <!--    <style name="LaunchTheme" parent="Theme.AppCompat.Light.NoActionBar">-->
+    <!--        <item name="android:windowBackground">@color/windowBackground</item>-->
+    <!--&lt;!&ndash;        <item name="android:windowTranslucentStatus">true</item>&ndash;&gt;-->
+    <!--&lt;!&ndash;        <item name="android:windowTranslucentNavigation">true</item>&ndash;&gt;-->
+    <!--    </style>-->
+
+    <!--    <style name="AppTheme.NoActionBar">-->
+    <!--        <item name="windowActionBar">false</item>-->
+    <!--        <item name="windowNoTitle">true</item>-->
+    <!--    </style>-->
+
+    <!--    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">-->
+
+
+    <!--    </style>-->
+
+    <!--    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />-->
+<!--    <style name="ViewTheme" parent="Theme.AppCompat.Light">-->
+
+<!--        <item name="windowNoTitle">true</item>-->
+
+
+
+<!--        <item name="windowActionBar">false</item>-->
+
+
+
+<!--        <item name="colorPrimary">@color/colorPrimaryDark</item>-->
+<!--        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+<!--        <item name="colorAccent">@color/colorAccent</item>-->
+<!--        <item name="android:windowBackground">@color/black</item>-->
+
+<!--        <item name="android:textColorPrimary">#ffff</item>-->
+
+<!--        -->
+<!--    </style>-->
+
+
+
+
+
+
+</resources>

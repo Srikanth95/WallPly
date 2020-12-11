@@ -1,0 +1,113 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorLayout">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/logo"
+        android:visibility="invisible"
+        android:paddingBottom="10dp"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        android:src="@drawable/latest_icon" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Wallply"
+        android:id="@+id/app_name"
+        android:textSize="30sp"
+        android:textColor="@color/startScreenText"
+        android:gravity="center"
+        app:layout_anchor="@id/logo"
+        app:layout_anchorGravity="bottom"
+        android:textStyle="normal"
+        android:visibility="invisible"
+        android:layout_below="@id/logo" />
+
+<!--    <com.google.android.gms.common.SignInButton-->
+<!--        android:id="@+id/sign_in_button"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:translationY="150dp"-->
+<!--        app:layout_anchor="@+id/app_name"-->
+<!--        app:layout_anchorGravity="bottom|center_horizontal"-->
+<!--        android:layout_marginTop="50dp"-->
+<!--        app:buttonSize="wide"-->
+<!--        app:colorScheme="auto" />-->
+
+    <ImageButton
+        android:id="@+id/sign_in_button"
+        android:layout_width="191dp"
+        android:scaleType="fitCenter"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:translationY="150dp"
+        app:layout_anchor="@+id/app_name"
+        app:layout_anchorGravity="bottom|center_horizontal"
+        android:layout_marginTop="50dp"
+        android:background="@color/transparent"
+        android:src="@drawable/btn_google_signin_light_normal_web"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="skip"
+        android:id="@+id/skip"
+        app:layout_anchor="@id/sign_in_button"
+        app:layout_anchorGravity="bottom|center_horizontal"
+        android:translationY="20dp"
+        android:layout_below="@id/sign_in_button"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:textColor="@color/startScreenText"/>
+
+    <com.google.android.material.progressindicator.ProgressIndicator
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/progress_bar"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
+        android:indeterminate="true"
+        android:layout_gravity="bottom|center_horizontal"
+        android:indeterminateTint="@color/white"
+        app:indicatorColor="@color/white"
+        app:indicatorType="linear" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/error_info"
+        android:text="Please check your Internet connection"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:textColor="@color/startScreenText"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="130dp"
+        android:indeterminate="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/retry"
+        android:background="@color/colorAccent"
+        android:textColor="@color/textColorPrimary"
+        android:text="retry"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="70dp"
+        />
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

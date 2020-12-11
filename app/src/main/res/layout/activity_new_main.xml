@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:id="@+id/homeScreenLayout"
+    tools:context="com.wallply.wallply.activities.NewMainActivity">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp"
+        android:id="@+id/fl_fragment" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:id="@+id/shadow_view"
+        ads:layout_anchor="@id/bottom_navigation"
+        android:background="@drawable/shadow"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/bottom_navigation"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        ads:elevation="10dp"
+        ads:itemIconTint="@drawable/bnb_selector"
+        ads:itemTextColor="@drawable/bnb_selector"
+        ads:itemHorizontalTranslationEnabled="false"
+        ads:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_navigation_menu"/>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
